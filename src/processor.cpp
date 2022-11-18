@@ -11,7 +11,7 @@ CPU_INFO Processor::GetLatestCpuInfo() {
 
 // TODO: Return the aggregate CPU utilization
 float Processor::Utilization() { 
-    float cpu_percentage;
+    float cpu_percentage{0};
     cur_cpu_info_ = std::make_unique<CPU_INFO>(GetLatestCpuInfo());
     #define WARP_SUBTRACT(a,b) (((a) > (b)) ? (a) - (b) : 0)
     if (prev_cpu_info_ != nullptr) {
