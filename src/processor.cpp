@@ -1,6 +1,8 @@
 #include "processor.h"
 
-
+Processor::Processor() {
+    Processor::Utilization();
+}
 CPU_INFO Processor::GetLatestCpuInfo() {
     CPU_INFO cur_info;
     cur_info.non_idle_time = LinuxParser::ActiveJiffies();
