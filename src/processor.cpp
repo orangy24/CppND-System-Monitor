@@ -7,7 +7,7 @@ CPU_INFO Processor::GetLatestCpuInfo() {
     CPU_INFO cur_info;
     cur_info.non_idle_time = LinuxParser::ActiveJiffies();
     cur_info.idle_time =  LinuxParser::IdleJiffies();
-    cur_info.total_time = LinuxParser::Jiffies();
+    cur_info.total_time = LinuxParser::Jiffies(); // total = idle + non idle
     return cur_info;
 }
 
